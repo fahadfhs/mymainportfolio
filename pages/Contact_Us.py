@@ -3,7 +3,6 @@ from send_email import send_email
 
 st.header("Contact Me")
 
-# app_password = owwu fqgr gzkk kjkh
 # form is a component which contains other components inside it,
 # also the form needs to have an id which we can see below
 with st.form(key="email_forms"):
