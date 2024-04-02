@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import os
+import base64
 
 # Load data and define image size
 df = pd.read_csv("data.csv", sep=";")
@@ -9,6 +11,13 @@ IMAGE_WIDTH = 250
 intro_style = """
     font-size: 18px;
     line-height: 1.6;
+    margin-bottom: 20px;
+"""
+
+app_card_style = """
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
     margin-bottom: 20px;
 """
 
@@ -61,22 +70,35 @@ with col5:
     st.markdown(f"[Kaggle]({kaggle_url})", unsafe_allow_html=True)
 
 # Intro
-st.markdown("**Below you can find some of the apps I have built in Python. Feel free to contact me!**")
+st.markdown("*Below you can find some of the apps I have built in Python. Feel free to contact me!*")
 
+for index, row in df.iterrows():
+    image_path = os.path.join("images", row["image"])
 
-# Display projects
-col1, col2 = st.columns(2)
+    # Display the app information with image embedded using HTML
+    st.markdown(
+        f'<div style="border: 1px solid #e6e6e6; border-radius: 10px; padding: 20px; margin-bottom: 20px;">'
+        f'<h3>{row["title"]}</h3>'
+        f'<p>{row["description"]}</p>'
+        f'<img src="data:image/png;base64,{base64.b64encode(open(image_path, "rb").read()).decode()}" style="max'
+        f'-width:300px;" alt="{row["title"]}"> '
+        f'<p><a href="{row["url"]}">Github Repository</a></p>'
+        f'</div>',
+        unsafe_allow_html=True,
+    )
 
-for index, row in df[:10].iterrows():
-    with col1:
-        st.header(row["title"])
-        st.write(row["description"])
-        st.image("images/" + row["image"], width=IMAGE_WIDTH)
-        st.write(f"[Source Code]({row['url']})")
-
-for index, row in df[10:].iterrows():
-    with col2:
-        st.header(row["title"])
-        st.write(row["description"])
-        st.image("images/" + row["image"], width=IMAGE_WIDTH)
-        st.write(f"[Source Code]({row['url']})")
+# col1, col2 = st.columns(2)
+#
+# for index, row in df[:10].iterrows():
+#     with col1:
+#         st.header(row["title"])
+#         st.write(row["description"])
+#         st.image("images/" + row["image"], width=IMAGE_WIDTH)
+#         st.write(f"[Source Code]({row['url']})")
+#
+# for index, row in df[10:].iterrows():
+#     with col2:
+#         st.header(row["title"])
+#         st.write(row["description"])
+#         st.image("images/" + row["image"], width=IMAGE_WIDTH)
+#         st.write(f"[Source Code]({row['url']})")
