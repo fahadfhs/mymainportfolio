@@ -5,7 +5,7 @@ def display_about_me():
     st.title("About Me")
 
     st.write("""
-    Below you can find some of my skills and tools i have workied with.
+    Below you can find some of my skills and tools I have worked with.
     """)
 
     # Skills & Expertise
@@ -18,7 +18,7 @@ def display_about_me():
             "Data Visualization",
         ]
         for skill in skills_expertise:
-            st.info(f"- {skill}")
+            st.success(f"- {skill}")
 
     # Technologies & Tools
     st.header("Technologies & Tools")
@@ -26,10 +26,10 @@ def display_about_me():
         technologies_tools = [
             "Python, R, SQL",
             "Pandas, Numpy, Matplotlib, Seaborn, Plotly, ggplot",
-            "Git, Jupyter Notebook, VS Code,Pycharm"
+            "Git, VS Code, Pycharm"
         ]
         for tech_tool in technologies_tools:
-            st.success(f"- {tech_tool}")
+            st.info(f"- {tech_tool}")
 
     # Additional Tools & Platforms
     st.header("Additional Tools & Platforms")
@@ -54,19 +54,19 @@ def display_about_me():
             "Google Data Analytics Certificate, 2024"
         ]
         for certification in education_certifications:
-            st.warning(f"- {certification}")
+            st.info(f"- {certification}")
 
     # Experience
     st.header("Experience")
     with st.container():
         st.markdown(
             """
-            - Team Leader, Sales Representative | Aedos Marketing, Halifax, NS | Jan 2018 - Mar. 2020
-              - Sales and Marketing Expertise: Consistently achieved sales goals, generated high revenue, and developed effective techniques.
-              - Leadership: Led team of over 10, and managed sales strategies for territories across Nova Scotia and PEI.
-              - Communication and Negotiation: Utilized exceptional skills to sell home internet, television, and security systems, while maintaining positive customer relationships.
-              - Strategic Thinking: Piloted campaigns to develop effective marketing strategies.
-              - Results-Oriented: Expanded customer base in targeted territories by implementing effective sales strategies.
+            - **Team Leader, Sales Representative** | Aedos Marketing, Halifax, NS | Jan 2018 - Mar. 2020
+              - *Sales and Marketing Expertise:* Consistently achieved sales goals, generated high revenue, and developed effective techniques.
+              - *Leadership:* Led team of over 10, and managed sales strategies for territories across Nova Scotia and PEI.
+              - *Communication and Negotiation:* Utilized exceptional skills to sell home internet, television, and security systems, while maintaining positive customer relationships.
+              - *Strategic Thinking:* Piloted campaigns to develop effective marketing strategies.
+              - *Results-Oriented:* Expanded customer base in targeted territories by implementing effective sales strategies.
             """,
             unsafe_allow_html=True,
         )
