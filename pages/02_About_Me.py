@@ -61,7 +61,7 @@ def display_about_me():
     with st.container():
         st.markdown(
             """
-            - **Team Leader, Sales Representative** | Aedos Marketing, Halifax, NS | Jan 2018 - Mar. 2020
+            - **Team Leader, Sales Representative** | Aedos Marketing, Halifax, NS | Dec 2017 - Mar. 2020
               - *Sales and Marketing Expertise:* Consistently achieved sales goals, generated high revenue, and developed effective techniques.
               - *Leadership:* Led team of over 10, and managed sales strategies for territories across Nova Scotia and PEI.
               - *Communication and Negotiation:* Utilized exceptional skills to sell home internet, television, and security systems, while maintaining positive customer relationships.
