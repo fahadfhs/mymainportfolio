@@ -7,7 +7,7 @@ def display_data_analysis_projects():
     st.write("Here are some of my data analysis projects:")
 
     # Project 1
-    with st.expander("Video Games Sales Analysis 📈", expanded=False):
+    with st.expander("Video Games Sales Analysis ", expanded=False):
         st.image("images/sales.png", use_column_width=True)
         st.write("This project aims to analyse sales data of video games from various genres and platforms, spanning"
                  " multiple years. By leveraging data analysis techniques and visualization tools, we uncover trends "
@@ -31,6 +31,15 @@ def display_data_analysis_projects():
                         "-2020-2024)")
 
     # Project 3
+    with st.expander("Bike Sales Tableau Dashboard Project", expanded=False):
+        st.image("images/dashboard.png", use_column_width=True)
+        st.write("This project uses SQL queries to extract and aggregate sales data from multiple tables. The "
+                 "data was then imported into Excel for further manipulation and analysis. Finally, I created a "
+                 "interactive dashboard using Tableau to visualize key metrics and trends effectively.")
+        button4 = st.button("View Project 3")
+        if button4:
+            st.markdown("[SQL and Tableau Dashboard](https://public.tableau.com/app/profile/fahad.shaikh3307/viz"
+                        "/BikeSales_Dashboard/Dashboard1)")
 
 
 # Call the function to display the content

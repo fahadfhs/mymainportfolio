@@ -25,9 +25,9 @@ app_card_style = """
 st.title("Fahad Shaikh")
 st.image("images/photo.png", width=IMAGE_WIDTH)
 st.markdown(
-    f"""<p style="{intro_style}">Hi, I am Fahad Shaikh, Centennial College software engineering graduate, 
-    specializing in AI. Skilled in Python, Java, and knowledgeable about PySpark. 
-    Proficient in agile development, I've collaborated effectively to solve complex problems. 
+    f"""<p style="{intro_style}">Hi, I am Fahad Shaikh, Centennial College Software Engineering (A.I) graduate, 
+    focusing in Data Analytics Roles skilled in Python, SQl.Proficient in agile development, I've collaborated 
+    effectively to solve projects in academic setting along with personal.
     Former marketing specialist with strong leadership and communication skills, leading 
     successful work trips. Passionate about F1, cars, and design, and with logo design 
     experience. Committed to personal and professional growth for a career in software 
